@@ -1,0 +1,20 @@
+{
+    "name": "purescript-arrays",
+    "set": "clj-0.1.0",
+    "source": "https://github.com/pure-clj/package-sets.git",
+    "depends": [
+        "prelude",
+        "bifunctors",
+        "control",
+        "maybe",
+        "newtype",
+        "orders",
+
+
+        "assert",
+        "console",
+        "integers",
+        "math",
+        "unsafe-coerce"
+    ]
+}

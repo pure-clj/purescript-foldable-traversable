@@ -30,7 +30,9 @@
                         3 ((apply* ((apply* ((map* array3) (f (nth array bot))))
                                     (f (nth array (inc bot)))))
                            (f (nth array (+ 2 bot))))
-                        (let [pivot (* (+ bot (Math/floor (/ (- top bot) 4))) 2)]
+                        (let [pivot (-> (long (Math/floor (/ (- top bot) 4)))
+                                        (* 2)
+                                        (+ bot))]
                           ((apply* ((map* concat2) (go bot pivot)))
                            (go pivot top)))))]
             (go 0 (count array))))))))

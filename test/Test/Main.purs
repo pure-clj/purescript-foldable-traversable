@@ -133,6 +133,7 @@ main = do
   assert $ maximum (arrayFrom1UpTo 10) == Just 10
 
   log "Test maximumBy"
+  log $ "result: " <> (show (maximumBy (compare `on` abs) (map (negate <<< toNumber) (arrayFrom1UpTo 10))))
   assert $
     maximumBy (compare `on` abs)
               (map (negate <<< toNumber) (arrayFrom1UpTo 10))
